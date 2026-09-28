@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TiendaMarket - Tu tienda online</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="#" class="logo">Tienda<span>Market</span></a>
+      <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="cart-btn" id="cartBtn" aria-label="Carrito">
+        Carrito <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <h1>Bienvenido a TiendaMarket</h1>
+        <p>Los mejores productos al mejor precio, con envío rápido y seguro.</p>
+        <a href="#productos" class="btn">Ver productos</a>
+      </div>
+    </section>
+
+    <section class="products" id="productos">
+      <div class="container">
+        <h2 class="section-title">Nuestros productos</h2>
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="gaseosas">Gaseosas</button>
+          <button class="filter-btn" data-filter="galletas">Galletas</button>
+          <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+          <button class="filter-btn" data-filter="lacteos">Lácteos</button>
+          <button class="filter-btn" data-filter="panaderia">Panadería</button>
+          <button class="filter-btn" data-filter="granos">Granos</button>
+          <button class="filter-btn" data-filter="dulces">Dulces</button>
+          <button class="filter-btn" data-filter="limpieza">Limpieza</button>
+        </div>
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div class="container">
+        <h2 class="section-title">Sobre nosotros</h2>
+        <p>
+          En TiendaMarket nos esforzamos por ofrecerte productos de calidad con la mejor atención.
+          Tu satisfacción es nuestra prioridad.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="close" id="closeCart" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <p>Total: <strong id="cartTotal">S/ 0.00</strong></p>
+      <button class="btn buy-btn" id="buyBtn">Comprar ahora</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <p>&copy; 2026 TiendaMarket. Todos los derechos reservados.</p>
+      <p>Contacto: ventas@tiendamarket.com | Tel: 123 456 789</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
